@@ -1,2 +1,2 @@
 web: start
-worker: serve -s build
+run: serve -s build
