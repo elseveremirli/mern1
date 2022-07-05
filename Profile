@@ -1,1 +1,2 @@
 web: start
+worker: serve -s build
