@@ -19,7 +19,7 @@ function App() {
   })
 
   useEffect(()=>{
-    fetch('/books').then(res => {
+    fetch('https://new-mern-app2.herokuapp.com/books').then(res => {
       if(res.ok){
         return res.json()
       }
@@ -47,7 +47,6 @@ function App() {
       department: book.department,
       comments: book.comments
     }
-    axiosInstance.post('/newbook', newBook)
     alert(`The Book ${book.bookName} is added`)
     setBook({
       bookName:"",
@@ -59,17 +58,17 @@ function App() {
   }
 
   const deleteBook = (id) => {
-    axios.delete('/delete/'+id)
+    axiosInstance.delete('/delete/'+id)
     alert(`The Book with id ${id} is deleted`)
   }
 
   const lendBook = (id) => {
-    axios.put('/lend/'+id)
+    axiosInstance.put('/lend/'+id)
     alert(`The Book with id ${id} is lended`)
   }
 
   const backBook = (id) => {
-    axios.put('/back/'+id)
+    axiosInstance.put('/back/'+id)
     alert(`The Book with id ${id} is back`)
   }
 
