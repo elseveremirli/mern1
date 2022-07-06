@@ -70,11 +70,11 @@ app.put('/back/:id', async (req,res)=>{
     }
 })
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+    res.sendFile(path.join(__dirname + '/client/build', 'index.html'));
   });
   
 
-app.use(express.static(path.join(__dirname, "/client")));
+app.use(express.static(path.join(__dirname + "/client")));
 
 const PORT = process.env.PORT || 5000
 
