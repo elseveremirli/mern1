@@ -47,6 +47,7 @@ function App() {
       department: book.department,
       comments: book.comments
     }
+    axios.post('https://new-mern-app2.herokuapp.com/newbook', newBook)
     alert(`The Book ${book.bookName} is added`)
     setBook({
       bookName:"",
