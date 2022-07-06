@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const axiosInstance = axios.create({
-    baseURL: "https://new-mern-app1.herokuapp.com"
+    baseURL: "https://new-mern-app2.herokuapp.com"
 })
