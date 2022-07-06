@@ -76,8 +76,8 @@ app.get('*', (req, res) => {
 
 app.use(express.static(path.join(__dirname, "/client")));
 
+const PORT = process.env.PORT || 5000
 
-
-app.listen(process.env.PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log('calisdi');
 })
