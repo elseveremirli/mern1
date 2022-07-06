@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "homepage": "https://myapp.herokuapp.com/",
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
