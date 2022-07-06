@@ -3,6 +3,7 @@ import "./App.css";
 import AddBook from "./components/AddBook";
 import Books from "./components/Books";
 import axios from 'axios'
+import { axiosInstance } from './confug'
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
       department: book.department,
       comments: book.comments
     }
-    axios.post('/newbook', newBook)
+    axiosInstance.post('/newbook', newBook)
     alert(`The Book ${book.bookName} is added`)
     setBook({
       bookName:"",
